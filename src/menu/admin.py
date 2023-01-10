@@ -1,0 +1,19 @@
+from django.contrib import admin
+
+# Register your models here.
+from .models import TreeMenu, TreeMenuCategory
+
+
+@admin.register(TreeMenuCategory)
+class TreeMenuCategoryAdmin(admin.ModelAdmin):
+
+    fields = [ 'name']
+    list_display = ['__str__']
+
+
+@admin.register(TreeMenu)
+class TreeMenuAdmin(admin.ModelAdmin):
+
+    fields = ['name', 'category', 'link', 'parent', ]
+    list_display = ['__str__', 'category', 'link', 'parent', ] 
+

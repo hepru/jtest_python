@@ -1,0 +1,48 @@
+*{box-sizing: border-box;}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+h3{
+    margin-left: 20px;
+}
+
+.menus{
+    display: flex;
+}
+
+nav{
+    padding: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+}
+.submenu a:hover {color: #000; font-style: italic;}
+.submenu .a {
+    margin-left: 5px;
+    color: inherit;
+}
+.submenu {
+    min-width: 200px;
+    background: #FFF;
+    display: none;
+}
+.topmenu, .visible {
+    display: block;
+}
+
+.submenu li a {
+    color: #282828;
+    padding: 10px 10px;
+    font-size: 13px;
+}
+
+.submenu li a.active { color: #000; font-weight: 600;}
+
+nav li:hover > .submenu {
+    display: block;
+}
